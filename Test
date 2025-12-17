@@ -72,12 +72,12 @@ def valid_room_number(room_number):
         return True
     
 # Global variables for email configuration to ensure e-mail configuration functioning
-smtp_server = 'smtp.gmail.com'
-smtp_port = 587
-smtp_username = 'hsgreportingtool@gmail.com'
-smtp_password = 'bjtp jmtf omrc tala'
-from_email = 'hsgreportingtool@gmail.com'
-# This feature was partly implemented through help of tutorials and ChatGPT but we had to do the right implementation and troubleshooting by ourselves
+smtp_server = st.secrets["SMTP_SERVER"]
+smtp_port = int(st.secrets["SMTP_PORT"])
+smtp_username = st.secrets["SMTP_USERNAME"]
+smtp_password = st.secrets["SMTP_PASSWORD"]
+from_email = st.secrets["FROM_EMAIL"]
+correct_password = st.secrets["ADMIN_PASSWORD"]
 
 # Set up our first page name:"Submission Form"
 def submission_form():
